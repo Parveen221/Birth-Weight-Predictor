@@ -35,7 +35,7 @@ def get_predict():
     clean_data=get_clean_data(test_data)
 
     test_clean_df=pd.DataFrame(clean_data) #coverting json data to DF
-    with open("model/model.pkl", "rb") as obj:
+    with open("model.pkl", "rb") as obj:
         model= pickle.load(obj)
 
         prediction=model.predict(test_clean_df)
